@@ -1,4 +1,5 @@
 from function import *
+import time
 
 print ("""
     __  _        ___    _____  ___  _____ ______      ____   ____  ____  ____  
@@ -19,13 +20,16 @@ if start == "Y" or start == "y":
     print('Enter the number of points:')
     num = int(input())
     count = 0
+    start = time.time()
     points = createPoint(num, dim)
     print(points)
     distance, point1, point2, count = closestDnC(points, count)
+    end = time.time()
     print('The closest distance is: ', distance)
     print('The first point is: ', point1)
     print('The second point is: ', point2)
     print('The number of Euclidean calls: ', count)
+    print('The time taken: ', round((end - start )*1000,2), "ms")
     plot(points, point1, point2)
 elif start == "N" or start == "n":
     print('Goodbye')

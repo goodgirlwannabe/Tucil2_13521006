@@ -2,7 +2,6 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-
 def createPoint (num, dim):
     #createPoint using randomize
     #num as number of points

@@ -6,6 +6,7 @@ Program menerima input berupa jumlah dimensi bidang serta jumlah titik yang ingi
 Algoritma yang digunakan pada program ini adalah Divide and Conquer dan Brute Force.
 
 ## Struktur Data
+```
 ├───bin
 │
 ├───doc
@@ -14,19 +15,18 @@ Algoritma yang digunakan pada program ini adalah Divide and Conquer dan Brute Fo
 ├───src
 │       function.py
 │       main.py
-│
-│
 └───README.md
+```
 
 ## Requirement Program
 - Python versi 3.11.2
 - Package matplotlib
-- Packgae numpy
+- Package numpy
 
 ## Cara Menggunakan Program
 1. Unduh repository ini
-2. Buka terminal dan arahkan deriktori ke tempat 'main.py' disimpan
-3. Run file 'py main.py'
+2. Buka terminal dan arahkan deriktori ke tempat `main.py` disimpan
+3. Run file `py main.py`
 
 ## Author
 - Nama  : Azmi Hasna Zahrani

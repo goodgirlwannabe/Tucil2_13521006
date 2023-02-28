@@ -22,6 +22,7 @@ if start == "Y" or start == "y":
     count = 0
     points = createPoint(num, dim)
     print(points)
+
     print ('------------------------------------')
     print('Divide and Conquer:')
     startDnC = time.time()
@@ -32,6 +33,7 @@ if start == "Y" or start == "y":
     print('The number of Euclidean calls: ', count)
     print('The time taken: ', round((endDnC - startDnC)*1000,2), "ms")
     print ('------------------------------------')
+
     print('Brute Force:')
     startBF = time.time()
     distance, point1, point2, count = closestBF(points, count)
@@ -42,8 +44,10 @@ if start == "Y" or start == "y":
     print('The time taken: ', round((endBF - startBF)*1000,2), "ms")
     print ('------------------------------------')
     plot(points, point1, point2)
+
 elif start == "N" or start == "n":
     print('Goodbye')
 else:
+    
     print('Invalid input')
     print('Goodbye')

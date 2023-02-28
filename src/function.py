@@ -14,6 +14,7 @@ def createPoint (num, dim):
     return points
 
 def euclideanDistance (point1, point2, count):
+    #count as number of euclidean calls
     count = count + 1
     distance = 0
     for i in range(len(point1)):
@@ -43,8 +44,8 @@ def closestDnC (points, count):
     else :
         #slice matrix into 2 parts
         half = len(points)//2
-        disA, pointA1, pointA2, count= closestDnC(points[:int(half)], count)
-        disB, pointB1, pointB2, count = closestDnC(points[int(half):], count)
+        disA, pointA1, pointA2, count= closestDnC(points[:int(half)], count) #rekursif
+        disB, pointB1, pointB2, count = closestDnC(points[int(half):], count) #rekursif
         if disA < disB:
             distance = disA
             point1 = pointA1
@@ -60,23 +61,23 @@ def closestDnC (points, count):
             if (abs(points[i][0] - middle) < distance).any():
                 sStrip.append(points[i])
         #compare sStrip
-
         for i in range(len(sStrip)):
             for j in range(1+i, len(sStrip)):
                 if (abs(sStrip[i][1] - sStrip[j][1]) < distance).any():
                     strip = euclideanDistance(sStrip[i], sStrip[j], count)
                     count = count + 1
-                    if strip < distance:
-                        distance = strip
+                    if strip < distance: #compare
+                        distance = strip 
                         point1 = sStrip[i]
                         point2 = sStrip[j]
     return distance, point1, point2, count
 
 def plot(points, point1, point2):
     # plot the points
-    # d is the dimension of the points
+    # dim is the dimension of the points
     dim = len(points[0])
     if dim == 2:
+        # 2D plot
         x = points[:, 0]
         y = points[:, 1]
         plt.scatter(x, y, color='black', alpha=0.5, s=10, marker='o')
@@ -84,6 +85,7 @@ def plot(points, point1, point2):
         plt.scatter(point2[0], point2[1], color='red')
         plt.show()
     elif dim == 3:
+        # 3D plot
         x = points[:, 0]
         y = points[:, 1]
         z = points[:, 2]
@@ -94,4 +96,5 @@ def plot(points, point1, point2):
         ax.scatter(point2[0], point2[1], point2[2], color='red')
         plt.show()
     else:
+        # more than 3D
         print('Cannot plot the points in ', dim, ' dimensions')

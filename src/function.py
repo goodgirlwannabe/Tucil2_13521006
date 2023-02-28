@@ -94,4 +94,4 @@ def plot(points, point1, point2):
         ax.scatter(point2[0], point2[1], point2[2], color='red')
         plt.show()
     else:
-        print('Cannot plot the points in dim dimensions')
+        print('Cannot plot the points in ', dim, ' dimensions')

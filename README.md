@@ -10,12 +10,12 @@ Algoritma yang digunakan pada program ini adalah Divide and Conquer dan Brute Fo
 │
 ├───doc
 │       1677052351975_Tucil2-Stima-2023.pdf
-|       Tucil2_K3_13521006_Azmi Hasna Zahrani.pdf
-|
+│       Tucil2_K3_13521006_Azmi Hasna Zahrani.pdf
 ├───src
 │       function.py
 │       main.py
-|
+│
+│
 └───README.md
 
 ## Requirement Program
